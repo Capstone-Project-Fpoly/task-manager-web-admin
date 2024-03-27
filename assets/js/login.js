@@ -1,6 +1,6 @@
    
- 
-
+//  import dotenv from "dotenv";
+//  dotenv.config();
   function validateEmail(email) {
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
@@ -22,6 +22,7 @@
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
     const URL = "https://tasks-manager-api-pi.vercel.app";
+    // const URL = process.env.URL;
 
     // Kiểm tra định dạng email
     if (!validateEmail(email)) {

@@ -53,7 +53,7 @@
               return;
             }
             saveTokenToLocalStorage(token);
-            window.location.replace('/public/index.html');
+            window.location.replace('../view/home/home.html');
 
           })
           .catch((error) => {

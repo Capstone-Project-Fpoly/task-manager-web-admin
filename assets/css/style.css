@@ -15,6 +15,189 @@
     display: block;
     margin-bottom: 20px;
   }
+  .actions-cell a {
+    display: inline-block;
+    margin-bottom: 3px;
+}
+
+
+.search-container {
+  display: flex;
+  justify-content: flex-end; 
+  align-items: center; 
+}
+
+#searchInput {
+  width: 250px; 
+  
+  margin-right: 5px; 
+}
+
+#searchButton {
+  background-color: #28a745; 
+  color: white; 
+  border: 1px solid black; 
+  padding: 5px 10px;
+  cursor: pointer; 
+}
+
+
+
+    #usersList {
+        margin: 0 auto;
+        width: 80%;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    .column-avatar,
+    .column-fullName,
+    .column-email,
+    .column-createdAt,
+    .column-updatedAt,
+    .column-role,
+    .column-isBanned,
+    .column-action {
+        width: 100px;
+    }
+    th,
+    td {
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    th,
+    td {
+        padding: 8px;
+        margin-right: 10px;
+
+        text-align: left;
+        border-bottom: 0.5px solid #ddd;
+    }
+
+
+
+    td img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+
+    tr {
+        line-height: 30px;
+    }
+
+    .userT {
+        overflow: auto;
+        width: 100%;
+    }
+
+
+    .tieude {
+        margin-top: 90px;
+        margin-left: 30px;
+
+    }
+
+
+    .chucnang {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        width: 100%;
+    }
+
+
+
+    .searchUsersT input[type="text"] {
+        margin-left: 10px;
+        
+    }
+
+    .searchUsersT input[type="text"] {
+        width: 250px;
+        height: 50px;
+        padding: 5px;
+        margin-right: 20px;
+    }
+
+    .sortUserT select {
+        width: 250px;
+        height: 50px;
+        padding: 5px;
+        margin-top: 30px;
+        margin-right: 20px;
+        border: 1px solid rgb(255, 255, 255);
+        border-radius: 10px;
+}
+
+
+
+    hr {
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border: none;
+        border-top: 1px solid #ccc;
+    }
+
+/* Định kiểu cho container chứa phân trang */
+.pagination-container {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    justify-content: center;
+    text-align: center;
+    z-index: 1000;
+}
+
+.pagination-container button {
+    padding: 8px 16px;
+    margin: 0 4px;
+    border: 1px solid #ddd; 
+    color: #666;
+    background-color: #fff; 
+    border-radius: 5px; 
+    cursor: pointer;
+    transition: background-color 0.3s; 
+}
+
+
+.pagination-container button:hover {
+    background-color: #ddd;
+}
+.pagination-container button.active {
+    background-color: #4CAF50;
+    color: white;
+    border: 1px solid #4CAF50;
+}
+
+
+.block-button {
+    background-color: red; 
+    color: white; 
+    border: none;
+    padding: 10px 15px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+    width: 100px;
+    height: 50px;
+}
+
+.block-button:hover {
+    background-color: darkred; /* Màu nền chuyển sang đậm hơn khi di chuột qua */
+}
+
+
+
+
 
   label {
     display: block;
@@ -22,6 +205,8 @@
 
   input[type="text"],
   input[type="password"],
+  input[type="email"],
+  input[type="name"],
   input[type="checkbox"] {
     display: block;
     width: calc(100% - 10px);

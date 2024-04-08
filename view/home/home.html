@@ -92,8 +92,8 @@
                     </a>
                     <div class="collapse" id="user-management">
                         <ul class="nav flex-column sub-menu">
-                            <li class="nav-item"> <a class="nav-link" href="#">Tạo tài khoản người dùng</a></li>
-                            <li class="nav-item"> <a class="nav-link" href="#">Danh sách người dùng</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="./taoTk_user.html">Tạo tài khoản người dùng</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="./danhsachUser.html">Danh sách người dùng</a></li>
                         </ul>
                     </div>
                 </li>
@@ -426,70 +426,9 @@
                             <div class="card">
                                 <div class="card-body">
                                     <div class="d-flex flex-row justify-content-between">
-                                        <h4 class="card-title">Tài khoản hoạt động gần đây</h4>
-                                        <p class="text-muted mb-1 small">View all</p>
                                     </div>
                                     <div class="preview-list">
-                                        <div class="preview-item border-bottom">
-                                            <div class="preview-thumbnail">
-                                                <img src="../../assets/image/image_user/face1.jpg" alt="image"
-                                                    class="rounded-circle" />
-                                            </div>
-                                            <div class="preview-item-content d-flex flex-grow">
-                                                <div class="flex-grow">
-                                                    <div class="d-flex d-md-block d-xl-flex justify-content-between">
-                                                        <h6 class="preview-subject">Khoan deptrai</h6>
-                                                        <p class="text-muted text-small">5 minutes ago</p>
-                                                    </div>
-                                                    <p class="text-muted">Tạm ng hoạt động</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="preview-item border-bottom">
-                                            <div class="preview-thumbnail">
-                                                <img src="../../assets/image/image_user/face1.jpg" alt="image"
-                                                    class="rounded-circle" />
-                                            </div>
-                                            <div class="preview-item-content d-flex flex-grow">
-                                                <div class="flex-grow">
-                                                    <div class="d-flex d-md-block d-xl-flex justify-content-between">
-                                                        <h6 class="preview-subject">Thành KC</h6>
-                                                        <p class="text-muted text-small">10 Minutes Ago</p>
-                                                    </div>
-                                                    <p class="text-muted">Tạm ngừng hoạt động.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="preview-item border-bottom">
-                                            <div class="preview-thumbnail">
-                                                <img src="../../assets/image/image_user/face1.jpg" alt="image"
-                                                    class="rounded-circle" />
-                                            </div>
-                                            <div class="preview-item-content d-flex flex-grow">
-                                                <div class="flex-grow">
-                                                    <div class="d-flex d-md-block d-xl-flex justify-content-between">
-                                                        <h6 class="preview-subject">Trần Lành</h6>
-                                                        <p class="text-muted text-small">2 Hours Ago</p>
-                                                    </div>
-                                                    <p class="text-muted">Tài khoản tạm dừng</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="preview-item border-bottom">
-                                            <div class="preview-thumbnail">
-                                                <img src="../../assets/image/image_user/face1.jpg" alt="image"
-                                                    class="rounded-circle" />
-                                            </div>
-                                            <div class="preview-item-content d-flex flex-grow">
-                                                <div class="flex-grow">
-                                                    <div class="d-flex d-md-block d-xl-flex justify-content-between">
-                                                        <h6 class="preview-subject">Xuân Thuỳ</h6>
-                                                        <p class="text-muted text-small">4 Hours Ago</p>
-                                                    </div>
-                                                    <p class="text-muted">Tải khoản tạm dừng.</p>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        <div id="usersList" style="margin-top: 50px; align-items: center;"></div>
                                     </div>
                                 </div>
                             </div>
@@ -527,6 +466,10 @@
     <script src="../../assets/js/misc.js"></script>
     <script src="../../assets/js/Chart.min.js"></script>
     <script src="../../assets/js/chart.js"></script>
+    <script src="../../assets/js/loadUser.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+sc
+
 
 </body>
 

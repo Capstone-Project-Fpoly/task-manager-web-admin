@@ -22,9 +22,6 @@
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
     const URL = "https://tasks-manager-api-pi.vercel.app";
-    // const URL = process.env.URL;
-
-    // Kiểm tra định dạng email
     if (!validateEmail(email)) {
       alert('Vui lòng nhập đúng định dạng email.');
       return;
@@ -53,7 +50,7 @@
               return;
             }
             saveTokenToLocalStorage(token);
-            window.location.replace('../view/home/home.html');
+            window.location.replace('../view/home/danhsachUser.html');
 
           })
           .catch((error) => {

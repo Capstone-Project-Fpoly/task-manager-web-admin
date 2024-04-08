@@ -55,7 +55,7 @@ async function getUser() {
         localStorage.getItem("token") || sessionStorage.getItem("token");
     try {
         const response = await axios.get(
-            "https://tasks-manager-api-pi.vercel.app/admin/users?page=1&limit=20",
+            "https://tasks-manager-api-pi.vercel.app/admin/users?page=1&limit=20000000000",
             {
                 headers: {
                     Authorization: `Bearer ${token}`,

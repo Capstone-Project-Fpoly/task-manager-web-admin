@@ -119,7 +119,6 @@ function renderUser(users) {
     <th class="column-updatedAt">UpdatedAt</th>
     <th class="column-role">Role</th>
     <th class="column-isBanned">IsBanned</th>
-    <th class="column-action">Action</th>
 </tr>`;
     perUser.forEach((value) => {
         const formattedCreatedAt = formatDate(value.createdAt);
@@ -133,9 +132,7 @@ function renderUser(users) {
     <td>${formattedUpdatedAt}</td>
     <td>${value.role}</td>
     <td>${value.isBanned ? 'True' : 'False'}</td>
-    <td>
-        <button class="block-button" data-uid="${value.uid}" data-isbanned="${value.isBanned}">${value.isBanned ? 'Huỷ' : 'Chặn'}</button>  
-    </td>
+  
 </tr>`;
     });
     element += `</table>`;
@@ -149,29 +146,7 @@ function renderUser(users) {
 }
 
 
-function blockUser(userId) {
-    const token = localStorage.getItem("token") || sessionStorage.getItem("token");
-    if (!token) {
-        console.log("Không tìm thấy token, vui lòng đăng nhập.");
-        return;
-    }
 
-
-    axios.post("https://tasks-manager-api-pi.vercel.app/admin/user/ban", { uid: userId }, {
-        headers: {
-            Authorization: `Bearer ${token}`,
-            'Content-Type': 'application/json'
-
-        }
-    })
-        .then(response => {
-            console.log("Người dùng đã được chặn thành công:", response.data);
-            window.location.reload();
-        })
-        .catch(error => {
-            console.error("Lỗi khi chặn người dùng:", error);
-        });
-}
 
 
 function updatePagination() {
@@ -186,8 +161,6 @@ function updatePagination() {
         });
         pagination.appendChild(button);
     }
-    
-    // Mặc định làm cho trang số 1 có class active
     const firstPageButton = pagination.querySelector("button");
     if (firstPageButton) {
         firstPageButton.classList.add("active");
@@ -253,10 +226,49 @@ try {
         }
     });
     console.log("Tạo tài khoản thành công:", response.data);
+    showSuccessMessage();
 } catch (error) {
     console.error("Lỗi khi tạo tài khoản:", error);
+    showSuccessMessageto();
 }
 });
 
+
+function showSuccessMessage() {
+    const messageDiv = document.createElement('div');
+    messageDiv.innerHTML = `
+    <div class="success-message2">
+  <div class="checkmark-container2">
+    <span class="checkmark2">&#10003;</span>
+  </div>
+  <strong>Tạo User Thành Công !</strong>
+  <div class="progress-bar3"></div>
+</div>
+    `;
+    document.body.appendChild(messageDiv);
+    
+    setTimeout(function() {
+      messageDiv.remove();
+    }, 3000);
+  }
+
+
+  function showSuccessMessageto() {
+    const messageDiv = document.createElement('div');
+    messageDiv.innerHTML = `
+    <div class="success-message3">
+  <div class="checkmark-container3">
+    <span class="checkmark3">x</span>
+  </div>
+  <strong>Tạo User thất bại. Vui lòng kiểm tra lại !</strong>
+  <div class="progress-bar4"></div>
+</div>
+    `;
+    document.body.appendChild(messageDiv);
+    
+    setTimeout(function() {
+      messageDiv.remove();
+    }, 3000);
+  }
 
 
